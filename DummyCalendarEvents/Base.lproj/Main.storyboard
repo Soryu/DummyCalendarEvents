@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HE6-Lb-0xv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <scenes>
+        <!--Dummy calendar events-->
+        <scene sceneID="q5F-Sw-DGe">
+            <objects>
+                <viewController title="Dummy calendar events" automaticallyAdjustsScrollViewInsets="NO" id="De8-2y-6vO" customClass="ViewController" customModule="DummyCalendarEvents" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMR-uT-eBw"/>
+                        <viewControllerLayoutGuide type="bottom" id="mEm-UH-Wqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UcF-KM-nm8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNP-7B-uxm">
+                                <rect key="frame" x="0.0" y="64" width="320" height="936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-p7-Phl" userLabel="dummy view">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="kwW-qE-G78"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58n-Vy-cBd">
+                                        <rect key="frame" x="8" y="16" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY9-uN-aKb">
+                                        <rect key="frame" x="0.0" y="45" width="320" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="Ocd-P0-E0L"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="De8-2y-6vO" id="hHr-GH-Upb"/>
+                                            <outlet property="delegate" destination="De8-2y-6vO" id="gYH-u7-RL1"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxt-1u-6jo">
+                                        <rect key="frame" x="20" y="169" width="77" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="FqY-JW-VtF">
+                                        <rect key="frame" x="0.0" y="206" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="460997327.83733302">
+                                            <!--2015-08-11 14:48:47 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval (days)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tw-XB-UrU">
+                                        <rect key="frame" x="20" y="438" width="108" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-WB-CmD" userLabel="$10 (interval)">
+                                        <rect key="frame" x="268" y="438" width="32" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="365" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-3x-AXk">
+                                        <rect key="frame" x="18" y="467" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="intervalSliderChanged:" destination="De8-2y-6vO" eventType="valueChanged" id="2aA-L2-xfh"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min start time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHM-0s-ysJ">
+                                        <rect key="frame" x="20" y="513" width="106" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$08:00 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-sD-ki4">
+                                        <rect key="frame" x="215" y="513" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="95" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-SL-1Z8">
+                                        <rect key="frame" x="18" y="542" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="minStartTimeSliderChanged:" destination="De8-2y-6vO" eventType="valueChanged" id="QKz-RE-tFS"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max start time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzD-6d-Sdl">
+                                        <rect key="frame" x="20" y="588" width="110" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$05:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMe-BZ-qHQ">
+                                        <rect key="frame" x="214" y="588" width="86" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="68" minValue="0.0" maxValue="95" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-c0-pN6">
+                                        <rect key="frame" x="18" y="617" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="maxStartTimeSliderChanged:" destination="De8-2y-6vO" eventType="valueChanged" id="7PY-Hv-BTc"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBW-VO-4bn">
+                                        <rect key="frame" x="20" y="663" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3 hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8U-Cy-IaU">
+                                        <rect key="frame" x="231" y="663" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="96" translatesAutoresizingMaskIntoConstraints="NO" id="1UW-kq-ciC">
+                                        <rect key="frame" x="18" y="692" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="durationSliderChanged:" destination="De8-2y-6vO" eventType="valueChanged" id="QKj-Nv-bXf"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All day probability" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT5-9P-XVH">
+                                        <rect key="frame" x="20" y="738" width="136" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A9-83-kt7">
+                                        <rect key="frame" x="258" y="738" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.15000000596046448" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-Gf-pHf">
+                                        <rect key="frame" x="18" y="767" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="allDayProbabilitySliderChanged:" destination="De8-2y-6vO" eventType="valueChanged" id="vdk-zt-12g"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AY9-uN-aKb" firstAttribute="top" secondItem="58n-Vy-cBd" secondAttribute="bottom" constant="8" symbolic="YES" id="0Jn-Am-tTd"/>
+                                    <constraint firstItem="Bxt-1u-6jo" firstAttribute="top" secondItem="AY9-uN-aKb" secondAttribute="bottom" constant="16" id="13H-qw-Zr7"/>
+                                    <constraint firstAttribute="trailing" secondItem="cJR-sD-ki4" secondAttribute="trailing" constant="20" id="2dh-GO-YEa"/>
+                                    <constraint firstItem="eLR-c0-pN6" firstAttribute="top" secondItem="BzD-6d-Sdl" secondAttribute="bottom" constant="8" id="2gO-1L-6OQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5A9-83-kt7" secondAttribute="trailing" constant="20" id="3QY-1k-DrK"/>
+                                    <constraint firstItem="QT5-9P-XVH" firstAttribute="top" secondItem="1UW-kq-ciC" secondAttribute="bottom" constant="16" id="41Z-hC-J5F"/>
+                                    <constraint firstItem="5A9-83-kt7" firstAttribute="baseline" secondItem="QT5-9P-XVH" secondAttribute="baseline" id="71G-Cv-Glg"/>
+                                    <constraint firstItem="s8U-Cy-IaU" firstAttribute="baseline" secondItem="dBW-VO-4bn" secondAttribute="baseline" id="7XW-xK-YTo"/>
+                                    <constraint firstItem="YTV-3x-AXk" firstAttribute="trailing" secondItem="a4N-WB-CmD" secondAttribute="trailing" id="7Yj-MV-png"/>
+                                    <constraint firstItem="rCf-p7-Phl" firstAttribute="top" secondItem="dNP-7B-uxm" secondAttribute="top" id="7wv-5R-Kef"/>
+                                    <constraint firstAttribute="trailing" secondItem="s8U-Cy-IaU" secondAttribute="trailing" constant="20" id="7x4-Bu-c0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="a4N-WB-CmD" secondAttribute="trailing" constant="20" id="ABd-em-546"/>
+                                    <constraint firstItem="aiu-Gf-pHf" firstAttribute="trailing" secondItem="5A9-83-kt7" secondAttribute="trailing" id="AGZ-x5-ZpI"/>
+                                    <constraint firstItem="1UW-kq-ciC" firstAttribute="trailing" secondItem="s8U-Cy-IaU" secondAttribute="trailing" id="C2C-xd-xEp"/>
+                                    <constraint firstAttribute="trailing" secondItem="rCf-p7-Phl" secondAttribute="trailing" id="Dkw-QU-wiK"/>
+                                    <constraint firstItem="YTV-3x-AXk" firstAttribute="top" secondItem="3Tw-XB-UrU" secondAttribute="bottom" constant="8" id="Dom-3n-gqU"/>
+                                    <constraint firstItem="vHM-0s-ysJ" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="ESN-7N-8T6"/>
+                                    <constraint firstItem="QT5-9P-XVH" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="GJ6-G6-oxt"/>
+                                    <constraint firstItem="YTV-3x-AXk" firstAttribute="leading" secondItem="3Tw-XB-UrU" secondAttribute="leading" id="Gs5-0b-ybq"/>
+                                    <constraint firstItem="dBW-VO-4bn" firstAttribute="top" secondItem="eLR-c0-pN6" secondAttribute="bottom" constant="16" id="Iue-Ux-hXo"/>
+                                    <constraint firstItem="58n-Vy-cBd" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="8" id="JYL-iZ-8wx"/>
+                                    <constraint firstItem="1UW-kq-ciC" firstAttribute="top" secondItem="dBW-VO-4bn" secondAttribute="bottom" constant="8" id="Jbi-UN-UGI"/>
+                                    <constraint firstItem="Bxt-1u-6jo" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="KYs-vS-lCR"/>
+                                    <constraint firstItem="AY9-uN-aKb" firstAttribute="centerX" secondItem="dNP-7B-uxm" secondAttribute="centerX" id="Lil-0W-ldr"/>
+                                    <constraint firstItem="3Tw-XB-UrU" firstAttribute="top" secondItem="FqY-JW-VtF" secondAttribute="bottom" constant="16" id="Lwp-nE-My5"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMe-BZ-qHQ" secondAttribute="trailing" constant="20" id="NgY-jH-FF6"/>
+                                    <constraint firstItem="aiu-Gf-pHf" firstAttribute="top" secondItem="QT5-9P-XVH" secondAttribute="bottom" constant="8" id="OsO-Yi-lOB"/>
+                                    <constraint firstItem="58n-Vy-cBd" firstAttribute="top" secondItem="dNP-7B-uxm" secondAttribute="top" constant="16" id="QLd-Hu-hvZ"/>
+                                    <constraint firstItem="a4N-WB-CmD" firstAttribute="baseline" secondItem="3Tw-XB-UrU" secondAttribute="baseline" id="UnY-m5-XUo"/>
+                                    <constraint firstItem="FqY-JW-VtF" firstAttribute="top" secondItem="Bxt-1u-6jo" secondAttribute="bottom" constant="16" id="XVq-3M-MJt"/>
+                                    <constraint firstItem="eLR-c0-pN6" firstAttribute="leading" secondItem="BzD-6d-Sdl" secondAttribute="leading" id="YLP-3c-xwF"/>
+                                    <constraint firstItem="3Tw-XB-UrU" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="Z3b-He-TXi"/>
+                                    <constraint firstItem="LMe-BZ-qHQ" firstAttribute="baseline" secondItem="BzD-6d-Sdl" secondAttribute="baseline" id="bth-Pb-tis"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FqY-JW-VtF" secondAttribute="trailing" id="c4F-PQ-pLb"/>
+                                    <constraint firstItem="cJR-sD-ki4" firstAttribute="baseline" secondItem="vHM-0s-ysJ" secondAttribute="baseline" id="f8I-cX-6Hy"/>
+                                    <constraint firstItem="FqY-JW-VtF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dNP-7B-uxm" secondAttribute="leading" id="g00-sj-E8o"/>
+                                    <constraint firstItem="AY9-uN-aKb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dNP-7B-uxm" secondAttribute="leading" id="gkq-Dg-PNA"/>
+                                    <constraint firstItem="rCf-p7-Phl" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" id="jIv-1X-OzQ"/>
+                                    <constraint firstItem="vHM-0s-ysJ" firstAttribute="top" secondItem="YTV-3x-AXk" secondAttribute="bottom" constant="16" id="jNY-o5-3S7"/>
+                                    <constraint firstItem="dBW-VO-4bn" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="ja3-ck-awH"/>
+                                    <constraint firstAttribute="bottom" secondItem="aiu-Gf-pHf" secondAttribute="bottom" constant="64" id="lz0-mC-uNS"/>
+                                    <constraint firstItem="BzD-6d-Sdl" firstAttribute="top" secondItem="tQP-SL-1Z8" secondAttribute="bottom" constant="16" id="mEg-fH-jW9"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AY9-uN-aKb" secondAttribute="trailing" id="ni5-6v-OfK"/>
+                                    <constraint firstItem="eLR-c0-pN6" firstAttribute="trailing" secondItem="LMe-BZ-qHQ" secondAttribute="trailing" id="oQ0-1R-x2G"/>
+                                    <constraint firstItem="aiu-Gf-pHf" firstAttribute="leading" secondItem="QT5-9P-XVH" secondAttribute="leading" id="qOb-ER-3Ew"/>
+                                    <constraint firstItem="tQP-SL-1Z8" firstAttribute="top" secondItem="vHM-0s-ysJ" secondAttribute="bottom" constant="8" id="rZb-Z3-vMj"/>
+                                    <constraint firstItem="BzD-6d-Sdl" firstAttribute="leading" secondItem="dNP-7B-uxm" secondAttribute="leading" constant="20" id="sG3-NR-WZK"/>
+                                    <constraint firstItem="tQP-SL-1Z8" firstAttribute="leading" secondItem="vHM-0s-ysJ" secondAttribute="leading" id="tUa-EY-e4f"/>
+                                    <constraint firstItem="FqY-JW-VtF" firstAttribute="centerX" secondItem="dNP-7B-uxm" secondAttribute="centerX" id="v9f-gH-Umc"/>
+                                    <constraint firstItem="1UW-kq-ciC" firstAttribute="leading" secondItem="dBW-VO-4bn" secondAttribute="leading" id="wRc-oN-DXu"/>
+                                    <constraint firstItem="tQP-SL-1Z8" firstAttribute="trailing" secondItem="cJR-sD-ki4" secondAttribute="trailing" id="zHi-bt-579"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNP-7B-uxm" firstAttribute="top" secondItem="DMR-uT-eBw" secondAttribute="bottom" id="4IW-UX-itq"/>
+                            <constraint firstItem="dNP-7B-uxm" firstAttribute="leading" secondItem="UcF-KM-nm8" secondAttribute="leading" id="Za9-LL-r7G"/>
+                            <constraint firstItem="rCf-p7-Phl" firstAttribute="width" secondItem="UcF-KM-nm8" secondAttribute="width" id="h5X-bD-ePX"/>
+                            <constraint firstItem="mEm-UH-Wqh" firstAttribute="top" secondItem="dNP-7B-uxm" secondAttribute="bottom" id="q6G-RM-JGK"/>
+                            <constraint firstAttribute="trailing" secondItem="dNP-7B-uxm" secondAttribute="trailing" id="yxP-hV-6pp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dummy calendar events" id="KvR-zG-pKB">
+                        <barButtonItem key="rightBarButtonItem" title="🚀 Go!" id="tIY-MT-4DO">
+                            <connections>
+                                <action selector="goButtonPressed:" destination="De8-2y-6vO" id="FKp-ck-7XK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outlet property="allDayProbabilitySlider" destination="aiu-Gf-pHf" id="3S8-6y-Nay"/>
+                        <outlet property="allDayProbabilityValueLabel" destination="5A9-83-kt7" id="TgO-Du-6Wr"/>
+                        <outlet property="calendarPickerView" destination="AY9-uN-aKb" id="c9s-yz-i4H"/>
+                        <outlet property="durationSlider" destination="1UW-kq-ciC" id="HIS-N7-Jah"/>
+                        <outlet property="durationValueLabel" destination="s8U-Cy-IaU" id="TMH-rj-NrI"/>
+                        <outlet property="intervalSlider" destination="YTV-3x-AXk" id="kMq-iD-N8R"/>
+                        <outlet property="intervalValueLabel" destination="a4N-WB-CmD" id="Zhy-ra-oWi"/>
+                        <outlet property="maxStartTimeSlider" destination="eLR-c0-pN6" id="HwH-68-5OM"/>
+                        <outlet property="maxStartTimeValueLabel" destination="LMe-BZ-qHQ" id="EuJ-hz-uJ5"/>
+                        <outlet property="minStartTimeSlider" destination="tQP-SL-1Z8" id="IfC-Kc-oEG"/>
+                        <outlet property="minStartTimeValueLabel" destination="cJR-sD-ki4" id="H4m-Wq-HTC"/>
+                        <outlet property="startDatePickerView" destination="FqY-JW-VtF" id="JQg-dX-nT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TiI-5c-ir7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="530"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l8b-D3-spj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HE6-Lb-0xv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Qa-ye-6Me">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="De8-2y-6vO" kind="relationship" relationship="rootViewController" id="dgJ-ui-yEl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jis-2K-Wcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="530"/>
+        </scene>
+    </scenes>
+</document>
