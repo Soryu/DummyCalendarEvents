@@ -10,4 +10,3 @@ Create dummy calendar entries (e.g. on Simulator or test devices)
 
 * Forces Gregorian calendar. I know nothing about the other types of calendar
 * Works on the main thread, so UI will hang while creating events
-* 
